@@ -1,15 +1,18 @@
-class Component {
+class Task {
     constructor(props) {
         this.props = props;
-        console.log("Test");
-        this.button.addEventListener("click", this.onClick)
-    }
-    onClick() {
-        console.log("Clicked");
+        this.element = document.createElement("div");
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        this.element.appendChild(checkbox);
+        let span = document.createElement("span");
+        this. element.appendChild(span);
+        span.innerHTML = this.props.content;
+        
     }
     render() {
-        return `<div></div>`;
+        return this.element;
     }
 
 }
-export default Component;
+export default Task;
